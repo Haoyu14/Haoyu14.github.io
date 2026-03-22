@@ -1,0 +1,24 @@
+<script>
+  // 页面加载完成后，给头像添加链接
+  document.addEventListener('DOMContentLoaded', function() {
+    var avatarImg = document.querySelector('.site-author-image');
+    if (avatarImg) {
+      var link = document.createElement('a');
+      link.href = '/about/';
+      link.className = 'site-author-link';
+      // 将图片包裹在链接中
+      avatarImg.parentNode.insertBefore(link, avatarImg);
+      link.appendChild(avatarImg);
+    }
+  });
+</script>
+
+<style>
+.site-author-link {
+  display: inline-block;
+  border-radius: 50%;
+}
+.site-author-link:hover {
+  opacity: 0.8;
+}
+</style>
